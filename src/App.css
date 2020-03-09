@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+
+.todo-list {
+  width: 400px;
+  background: #073642;
+  padding: 12px;
+  margin: 12px;
+}
+
+ul {
+  margin-bottom: 36px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  padding-right: 24px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+input {
+  background: #586e75;
+  border: none;
+  color: #fdf6e3;
+}
+
+button {
+  background: #cb4b16;
+  border: none;
+  color: #002b36;
+}
+
+.new-todo button {
+  background: #859900;
+}

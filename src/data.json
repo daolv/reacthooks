@@ -1,0 +1,5 @@
+[
+  { "id": 0, "label": "Learn about Hooks", "done": true },
+  { "id": 1, "label": "Prepare a demo", "done": false },
+  { "id": 2, "label": "Prepare presentation slides", "done": false }
+]
