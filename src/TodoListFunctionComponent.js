@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import data from './data.json';
+import axios from 'axios';
 
 export const TodoListFunctionComponent = () => {
     const [todos, setTodos] = useState();
@@ -7,10 +8,16 @@ export const TodoListFunctionComponent = () => {
     const [newTodoLabel, setNewTodoLabel] = useState("");
 
     useEffect(() => {
-
-        setTodos(data);
-        setNextTodoId(data.length);
-    }, []);
+        axios
+          .get(
+            "https://raw.githubusercontent.com/daolv/reacthooks/master/src/data.json"
+          )
+          .then(({ data }) => {
+            setTodos(data);
+            setNextTodoId(data.length);
+          });
+      }, []);
+    
 
     const markTodoAsDone = (id, done) =>
         setTodos(todos.map(todo => (todo.id === id ? { ...todo, done } : todo)));
